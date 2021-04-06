@@ -3,13 +3,6 @@ on:                       [push, pull_request]
 
 jobs:
   build:
-    strategy:
-      matrix:
-        name:             [ubuntu-standard]
-        include:
-          - name:         ubuntu-standard
-            os:           ubuntu-latest
-    runs-on:              ${{ matrix.os }}
     steps:
     - uses:               actions/checkout@v1
     - name:               setup environment
