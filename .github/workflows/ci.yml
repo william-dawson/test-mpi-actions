@@ -18,6 +18,6 @@ jobs:
     - name:               build
       run:                |
         mkdir build ; cd build
-        cmake .. -DCMAKE_CXX_COMPILER=mpicxx
+        cmake .. -DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_CXXFLAGS="-O0 -openmp -lgomp"
         make VERBOSE=1
         cd ../
