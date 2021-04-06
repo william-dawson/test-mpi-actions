@@ -18,6 +18,5 @@ jobs:
     - name:               build
       run:                |
         mkdir build ; cd build
-        cmake .. -DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_CXX_FLAGS="-O0"
+        cmake .. -DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_CXX_FLAGS="-openmp"
         make VERBOSE=1
-        cd ../
